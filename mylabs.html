@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Nakerah Lab V1 practice list." />
+  <meta name="theme-color" content="#0b0f14" />
+  <title>My Labs | Adam Ghanem</title>
+  <link rel="canonical" href="https://adam-ghanem.com/mylabs.html" />
+  <meta property="og:title" content="My Labs | Adam Ghanem" />
+  <meta property="og:description" content="Nakerah Lab V1 practice list." />
+  <meta property="og:image" content="https://adam-ghanem.com/assets/img/og-image.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://adam-ghanem.com/mylabs.html" />
+  <meta property="og:site_name" content="Adam Ghanem" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="My Labs | Adam Ghanem" />
+  <meta name="twitter:description" content="Nakerah Lab V1 practice list." />
+  <meta name="twitter:image" content="https://adam-ghanem.com/assets/img/og-image.png" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="./index.html" aria-label="Home">
+        <span class="logo__text">Adam Ghanem</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="./index.html">Home</a></li>
+          <li><a class="nav__link is-active" href="./mylabs.html">My Labs</a></li>
+          <li><a class="nav__link" href="./writeups.html">Writeups</a></li>
+          <li><a class="nav__link" href="./index.html#contact">Contact</a></li>
+        </ul>
+        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav__sidebar-bg" id="navSidebarBg"></div>
+        <nav class="nav__sidebar" id="navSidebar">
+          <button class="nav__sidebar-close" aria-label="Close menu" id="navSidebarClose">&times;</button>
+          <a class="nav__link" href="./index.html">Home</a>
+          <a class="nav__link is-active" href="./mylabs.html">My Labs</a>
+          <a class="nav__link" href="./writeups.html">Writeups</a>
+          <a class="nav__link" href="./index.html#contact">Contact</a>
+        </nav>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section__head">
+        <h1 class="section__title">My Labs</h1>
+        <p class="section__desc">Nakerah Lab V1 — all labs are currently <strong>in progress</strong>.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <article class="card card--line">
+          <h2 class="card__title">bWAPP <span class="tag tag--warn">In progress</span></h2>
+          <p class="card__text">Vulnerable web app for learning common web vulnerabilities.</p>
+        </article>
+
+        <article class="card card--line">
+          <h2 class="card__title">XVWA <span class="tag tag--warn">In progress</span></h2>
+          <p class="card__text">Training app for practicing web security testing concepts.</p>
+        </article>
+
+        <article class="card card--line">
+          <h2 class="card__title">DVWA <span class="tag tag--warn">In progress</span></h2>
+          <p class="card__text">Classic intentionally vulnerable app for OWASP learning.</p>
+        </article>
+
+        <article class="card card--line">
+          <h2 class="card__title">Mutillidae <span class="tag tag--warn">In progress</span></h2>
+          <p class="card__text">A deliberately vulnerable web application for practice.</p>
+        </article>
+
+        <article class="card card--line">
+          <h2 class="card__title">Hackademic <span class="tag tag--warn">In progress</span></h2>
+          <p class="card__text">Web security training application.</p>
+        </article>
+
+        <article class="card card--line">
+          <h2 class="card__title">SQLi Labs <span class="tag tag--warn">In progress</span></h2>
+          <p class="card__text">Focused practice on SQL injection fundamentals (educational).</p>
+        </article>
+      </div>
+
+      <div class="card" style="margin-top:12px;">
+        <h2 class="card__title">How I document labs</h2>
+        <p class="card__text">I write sanitized, educational writeups focusing on concepts and defensive takeaways.</p>
+        <div class="card__foot">
+          <a class="btn btn--primary" href="./writeups.html">Go to Writeups</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="muted">&copy; <span data-year></span> Adam Ghanem</span>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

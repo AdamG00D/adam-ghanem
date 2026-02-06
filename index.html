@@ -1,244 +1,249 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+    <link rel="canonical" href="https://adam-ghanem.com/" />
+    <meta property="og:title" content="Adam Ghanem | Cybersecurity Trainee" />
+    <meta property="og:description" content="Labs, writeups, and learning journey in cybersecurity, Linux, and web security." />
+    <meta property="og:image" content="https://adam-ghanem.com/assets/img/og-image.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://adam-ghanem.com/" />
+    <meta property="og:site_name" content="Adam Ghanem" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Adam Ghanem | Cybersecurity Trainee" />
+    <meta name="twitter:description" content="Labs, writeups, and learning journey in cybersecurity, Linux, and web security." />
+    <meta name="twitter:image" content="https://adam-ghanem.com/assets/img/og-image.png" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Adam Ghanem — Law student & cybersecurity trainee. Focused on web security, Linux, networking, and Python." />
+  <meta name="theme-color" content="#0b0f14" />
   <title>Adam Ghanem</title>
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Arabic/English discoverability -->
+  <meta name="keywords" content="Adam Ghanem, آدم غانم, ادم غانم, الأمن السيبراني, سايبر سيكيورتي, Bug Bounty, طالب حقوق, cybersecurity trainee, writeups, labs" />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
+
 <body>
+    <button id="scrollTopBtn" title="Back to top" aria-label="Back to top">↑</button>
+  <a class="skip" href="#content">Skip to content</a>
 
-  <!-- Navigation -->
-  <nav>
-    <div class="container nav-wrapper">
-      <a href="#" class="nav-logo" onclick="scrollToTop(event)">
-        <i class="fas fa-scale-balanced"></i>
-        Adam Ghanem
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="./index.html" aria-label="Home">
+        <span class="logo__text">Adam Ghanem</span>
       </a>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#projects">Projects</a>
-        <a href="#certificates">Certificates</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <button class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Hero Header -->
-  <header>
-    <div class="hero-bg"></div>
-    <div class="hero">
-      <div class="hero-content">
-        <h1>Adam Ghanem</h1>
-        <p>Law Student & Cybersecurity Enthusiast</p>
-        <p>Combining legal expertise with technological innovation to shape the future of digital law</p>
-        <div class="hero-btns">
-          <a href="#projects" class="btn btn-primary">View My Projects</a>
-          <a href="#contact" class="btn btn-outline">Contact Me</a>
-        </div>
-      </div>
+      <nav class="nav" aria-label="Primary navigation">
+        <ul class="nav__list">
+          <li><a class="nav__link is-active" href="./index.html">Home</a></li>
+          <li><a class="nav__link" href="./mylabs.html">My Labs</a></li>
+          <li><a class="nav__link" href="./writeups.html">Writeups</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav__sidebar-bg" id="navSidebarBg"></div>
+        <nav class="nav__sidebar" id="navSidebar">
+          <button class="nav__sidebar-close" aria-label="Close menu" id="navSidebarClose">&times;</button>
+          <a class="nav__link is-active" href="./index.html">Home</a>
+          <a class="nav__link" href="./mylabs.html">My Labs</a>
+          <a class="nav__link" href="./writeups.html">Writeups</a>
+          <a class="nav__link" href="#contact">Contact</a>
+        </nav>
+      </nav>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main class="container">
-
-    <!-- About Me -->
-    <section id="about">
-      <h2>About Me</h2>
-      <div class="about">
-        <p>
-          I am a law student at Alexandria University combining legal studies with technology. Skilled in Python, Linux administration, foundational cybersecurity and I have completed the CS50 for Lawyers course.
-        </p>
-        <br>
-        <p>
-          My passion lies at the intersection of law and technology, where I explore how legal frameworks can adapt to the rapidly evolving digital landscape. I believe that understanding both domains is essential for addressing modern challenges in cybersecurity, digital rights, and technology governance.
-        </p>
-        <Br>
-        <p>
-          With a strong foundation in both legal principles and technical skills, I aim to bridge the gap between these two worlds and contribute to the development of innovative legal tech solutions.
-        </p>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="skills">
-        <ul>
-          <li>Python Programming</li>
-          <li>Linux Administration</li>
-          <li>Cybersecurity Fundamentals</li>
-          <li>CS50 for Lawyers (HarvardX)</li>
-          <li>Arabic (Native) & English (A2–B1)</li>
-          <li>Legal Tech Solutions Development</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section id="education">
-      <h2>Education</h2>
-      <div class="education">
-        <div class="timeline">
-          <div class="timeline-item">
-            <h3>Faculty of Law, Alexandria University</h3>
-            <p>Bachelor of Laws (LLB)</p>
-            <span class="date">2024 – Present</span>
+  <main id="content">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__left fadeUp">
+          <div class="badge">
+            <span class="dot"></span>
+            <span>Learning • Practicing • Documenting</span>
           </div>
-          <div class="timeline-item">
-            <h3>CS50 for Lawyers (HarvardX)</h3>
-            <p>Introduction to computer science and programming for legal professionals</p>
-            <span class="date">2025</span>
+
+          <h1 class="hero__title">Adam <span class="accent">Ghanem</span></h1>
+
+          <p class="hero__subtitle">
+            Law student & cybersecurity trainee. Building strong foundations in
+            <strong>web security</strong>, <strong>Linux</strong>, <strong>networking</strong>, and <strong>Python</strong>.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="./mylabs.html">My Labs</a>
+            <a class="btn btn--ghost" href="./writeups.html">Read Writeups</a>
+          </div>
+
+          <div class="hero__meta">
+            <div class="metaCard">
+              <div class="metaCard__k">Focus</div>
+              <div class="metaCard__v">Web security learning (bug bounty & CTF)</div>
+            </div>
+            <div class="metaCard">
+              <div class="metaCard__k">Currently</div>
+              <div class="metaCard__v">OSCP + Nakerah labs + Writeups</div>
+            </div>
+            <div class="metaCard">
+              <div class="metaCard__k">Strength</div>
+              <div class="metaCard__v">Legal + Technical mindset</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__right fadeUp delay1">
+          <div class="terminal" aria-label="Terminal card">
+            <div class="terminal__top">
+              <span class="pill red"></span>
+              <span class="pill yellow"></span>
+              <span class="pill green"></span>
+              <span class="terminal__title">~/adam-ghanem</span>
+            </div>
+
+            <pre class="terminal__body"><code>$ whoami
+adam
+
+$ cat status.txt
+Law student.
+Cybersecurity trainee.
+Ethical learning & documentation.
+
+$ ls focus/
+web_security  linux  networking  python
+
+$ echo "Keep it simple. Keep it honest."
+Keep it simple. Keep it honest.</code></pre>
+          </div>
+
+          <div class="glowCard">
+            <div class="glowCard__title">What you’ll find here</div>
+            <ul class="list">
+              <li>Labs I’m practicing (Nakerah Lab V1)</li>
+              <li>Clean writeups (educational & sanitized)</li>
+              <li>Courses + foundations + progress</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="projects">
-        <div class="projects-grid">
-
-          <div class="project-card">
-            <div class="project-img">
-              <img src="projects/Cipher.png" alt="TheCipher App">
-            </div>
-            <div class="project-content">
-              <h3>TheCipher App</h3>
-              <p>A simple application for encrypting messages using AES, with the ability to change the key and store it on the phone.</p>
-              <a href="https://github.com/AdamG00D/TheCipher_App" target="_blank" class="project-link">View Project</a>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-img">
-              <img src="projects/Blu.png" alt="BLU App">
-            </div>
-            <div class="project-content">
-              <h3>BLU App</h3>
-              <p>BLU is a simple Bluetooth-based chat app for Android devices, built with MIT App Inventor.</p>
-              <a href="https://github.com/AdamG00D/BLU_App" target="_blank" class="project-link">View Project</a>
-            </div>
-          </div>
-          
-          <div class="project-card">
-            <div class="project-img">
-              <img src="projects/Elbasha.png" alt="ElBasha App">
-            </div>
-            <div class="project-content">
-              <h3>ElBasha App</h3>
-              <p>Fake Police Voice Prank</p>
-              <a href="https://github.com/AdamG00D/ElBasha_App" target="_blank" class="project-link">View Project</a>
-            </div> 
-          </div>
-
-          <div class="project-card">
-            <div class="project-img">
-              <img src="projects/secretly.png" alt="Secretly Website">
-            </div>
-            <div class="project-content">
-              <h3>Secretly Website</h3>
-              <p>A anonymous messaging website that lets users send you secret messages without revealing their identity. Fully responsive and supports both Arabic and English automatically.</p>
-              <a href="https://github.com/AdamG00D/secretly" target="_blank" class="project-link">View Project</a>
-              <a href="https://adamg00d.github.io/secretly/" target="_blank" class="project-link">Visit Website</a>
-            </div>
-          </div>
-
+    <!-- ABOUT -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head fadeUp">
+          <h2 class="section__title">About</h2>
+          <p class="section__desc">
+            Early in the journey, focused on learning the right way: practice, documentation, and ethics.
+          </p>
         </div>
-      </div>
-    </section>
-    
-    <!-- Certificates Carousel -->
-    <section id="certificates">
-      <h2>Certificates</h2>
-      <div class="carousel-container">
-        <button class="carousel-btn prev" aria-label="Previous">&larr;</button>
-        <div class="carousel-track-container">
-          <div class="carousel-track">
-            
-            <div class="cert-item">
-              <a href="https://courses.edx.org/certificates/653c48a4f41a4aecaa234c8193add41d" target="_blank">
-                <img src="certificates/HarvardX CS50L Certificate.png" alt="HarvardX CS50L Certificate">
-              </a>
-            </div>
 
-            <div class="cert-item">
-              <a href="https://cs50.harvard.edu/certificates/c4a3e8ce-764a-48e3-bfa0-df0d5f9b35cf" target="_blank">
-                <img src="certificates/CS50L.png" alt="CS50 For Lawyers Certificate">
-              </a>
-            </div> 
+        <div class="grid grid--3">
+          <article class="card fadeUp">
+            <h3 class="card__title">Foundations</h3>
+            <p class="card__text">
+              Linux (daily usage), Python scripting, networking, and web security fundamentals.
+            </p>
+          </article>
 
-            <div class="cert-item">
-              <a href="http://ude.my/UC-7e0afd8c-5231-445f-baa1-53131a632816" target="_blank">
-                <img src="certificates/CS.jpg" alt="Learn Ethical Hacking From Scratch Certificate">
-              </a>
-            </div>
-            
+          <article class="card fadeUp delay1">
+            <h3 class="card__title">Courses</h3>
+            <p class="card__text">
+              CS50cy Cybersecurity, CS50L Computer Science for Lawyers, and Udemy Intro to Cybersecurity.
+            </p>
+          </article>
 
-            <div class="cert-item">
-              <a href="https://www.sololearn.com/certificates/CT-XA53XLZY" target="_blank">
-                <img src="certificates/Py_Core.png" alt="Python Core Certificate">
-              </a>
-            </div>
-
-          </div>
-        </div>
-        <button class="carousel-btn next" aria-label="Next">&rarr;</button>
-        <div class="carousel-indicators">
-          <div class="indicator active" data-index="0"></div>
-          <div class="indicator" data-index="1"></div>
-          <div class="indicator" data-index="2"></div>
-          <div class="indicator" data-index="3"></div>
+          <article class="card fadeUp delay2">
+            <h3 class="card__title">Ethics</h3>
+            <p class="card__text">
+              I practice in legal training environments only. No testing on real targets without permission.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="contact">
-        <div class="contact-content">
-          <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
-          <div class="contact-icons">
-            <a href="https://www.facebook.com/AdamGO0D" target="_blank" title="Facebook">
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://linkedin.com/in/adamg00d" target="_blank" title="LinkedIn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/adamg00d" target="_blank" title="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
+    <!-- LEARNING PATH (ستايل أول تصميم) -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__head fadeUp">
+          <h2 class="section__title">Learning Path</h2>
+          <p class="section__desc">What I’ve completed, what I’m practicing, and what I’m building.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <article class="card card--line fadeUp">
+            <h3 class="card__title">Courses & Certificates</h3>
+            <ul class="check">
+              <li><span>CS50cy — Cybersecurity</span> <span class="tag tag--info">Completed</span></li>
+              <li><span>CS50L — Computer Science for Lawyers (HarvardX)</span> <span class="tag tag--good">Verified</span></li>
+              <li><span>Udemy — Intro to Cybersecurity</span> <span class="tag tag--info">Completed</span></li>
+            </ul>
+          </article>
+
+          <article class="card card--line fadeUp delay1">
+            <h3 class="card__title">Skills</h3>
+            <ul class="check">
+                <li><span>Linux Administration</span></li>
+                <li><span>Bash Scripting</span></li>
+                <li><span>Python (scripting & automation)</span></li>
+                <li><span>Networking</span></li>
+                <li><span>Web Security fundamentals</span></li>
+                <li><span>Cryptography basics</span></li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section__head fadeUp">
+          <h2 class="section__title">Contact</h2>
+          <p class="section__desc">Feel free to reach out via any platform below.</p>
+        </div>
+        <div class="contact-cards">
+          <a class="contact-card github" href="https://github.com/AdamG00D" target="_blank" rel="noopener">
+            <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.186 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.339-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.987 1.029-2.686-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.202 2.397.1 2.65.64.699 1.028 1.593 1.028 2.686 0 3.847-2.337 4.695-4.566 4.944.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.749 0 .268.18.579.688.481C19.138 20.203 22 16.447 22 12.021 22 6.484 17.523 2 12 2Z"/></svg>
+            <span>AdamG00D</span>
+          </a>
+          <a class="contact-card linkedin" href="https://www.linkedin.com/in/AdamG00D" target="_blank" rel="noopener">
+            <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm15.5 11.28h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.89v1.36h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v5.59z"/></svg>
+            <span>adam ghanem</span>
+          </a>
+          <a class="contact-card email" href="mailto:AdamG00D@proton.me">
+            <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zm0 12H4V8.99l8 6.99 8-6.99V18z"/></svg>
+            <span>Email</span>
+          </a>
+          <a class="contact-card telegram" href="https://t.me/AdamG00D" target="_blank" rel="noopener">
+            <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.6 16.8 9.9 20c.4 0 .6-.2.9-.5l2.2-2.1 4.6 3.4c.9.5 1.5.2 1.7-.8l3.1-14.5v-.1c.3-1.1-.4-1.6-1.2-1.3L2.2 9.5c-1.1.4-1.1 1.1-.2 1.4l4.6 1.4L18 7.5c.6-.3 1.1-.1.7.3L9.6 16.8z"/></svg>
+            <span>Telegram</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Arabic discoverability (hidden) -->
+    <section style="position:absolute;left:-9999px;height:1px;overflow:hidden;" lang="ar" dir="rtl">
+      <h2>آدم غانم</h2>
+      <p>
+        طالب كلية الحقوق مهتم بمجال الأمن السيبراني واختبار أمان تطبيقات الويب (Bug Bounty)،
+        ويطوّر مهاراته في لينكس وبايثون والشبكات، ويكتب شروحات وتجارب تعليمية بشكل قانوني وأخلاقي.
+      </p>
+    </section>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Adam Ghanem. All rights reserved.
+  <!-- Footer ثابت باسمك فقط -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="muted">&copy; <span data-year></span> Adam Ghanem</span>
+    </div>
   </footer>
 
-  <!-- JavaScript -->
-  <script src="script.js"></script>
+  <!-- لو عندك main.js بالفعل سيبه، لو مش موجود احذف السطر -->
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>

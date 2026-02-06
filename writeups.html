@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Educational writeups by Adam Ghanem." />
+  <meta name="theme-color" content="#0b0f14" />
+  <title>Writeups | Adam Ghanem</title>
+  <link rel="canonical" href="https://adam-ghanem.com/writeups.html" />
+  <meta property="og:title" content="Writeups | Adam Ghanem" />
+  <meta property="og:description" content="Educational writeups by Adam Ghanem." />
+  <meta property="og:image" content="https://adam-ghanem.com/assets/img/og-image.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://adam-ghanem.com/writeups.html" />
+  <meta property="og:site_name" content="Adam Ghanem" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Writeups | Adam Ghanem" />
+  <meta name="twitter:description" content="Educational writeups by Adam Ghanem." />
+  <meta name="twitter:image" content="https://adam-ghanem.com/assets/img/og-image.png" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="./index.html" aria-label="Home">
+        <span class="logo__text">Adam Ghanem</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="./index.html">Home</a></li>
+          <li><a class="nav__link" href="./mylabs.html">My Labs</a></li>
+          <li><a class="nav__link is-active" href="./writeups.html">Writeups</a></li>
+          <li><a class="nav__link" href="./index.html#contact">Contact</a></li>
+        </ul>
+        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav__sidebar-bg" id="navSidebarBg"></div>
+        <nav class="nav__sidebar" id="navSidebar">
+          <button class="nav__sidebar-close" aria-label="Close menu" id="navSidebarClose">&times;</button>
+          <a class="nav__link" href="./index.html">Home</a>
+          <a class="nav__link" href="./mylabs.html">My Labs</a>
+          <a class="nav__link is-active" href="./writeups.html">Writeups</a>
+          <a class="nav__link" href="./index.html#contact">Contact</a>
+        </nav>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section__head">
+        <h1 class="section__title">Writeups</h1>
+        <p class="section__desc">Sanitized, educational writeups. Click any writeup to open it.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <a class="card card--line cardLink" href="./writeups/python-port-scanner.html">
+          <h2 class="card__title">Python Port Scanner (Educational)</h2>
+          <p class="card__text">Understand TCP connect behavior, timeouts, and clean socket handling.</p>
+          <div class="card__foot">
+            <span class="tag">Python</span>
+            <span class="tag">Networking</span>
+          </div>
+        </a>
+
+        <div class="card card--line">
+          <h2 class="card__title">Next writeup</h2>
+          <p class="card__text">Add your next lab writeup here (bWAPP / DVWA / SQLi Labs…)</p>
+          <div class="card__foot">
+            <span class="tag tag--warn">In progress</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="muted">&copy; <span data-year></span> Adam Ghanem</span>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

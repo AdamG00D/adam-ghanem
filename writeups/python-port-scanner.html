@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Educational writeup: Python port scanner." />
+  <meta name="theme-color" content="#0b0f14" />
+  <title>Python Port Scanner | Writeup</title>
+  <link rel="canonical" href="https://adam-ghanem.com/writeups/python-port-scanner.html" />
+  <meta property="og:title" content="Python Port Scanner | Writeup" />
+  <meta property="og:description" content="Educational writeup: Python port scanner." />
+  <meta property="og:image" content="https://adam-ghanem.com/assets/img/og-image.png" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://adam-ghanem.com/writeups/python-port-scanner.html" />
+  <meta property="og:site_name" content="Adam Ghanem" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Python Port Scanner | Writeup" />
+  <meta name="twitter:description" content="Educational writeup: Python port scanner." />
+  <meta name="twitter:image" content="https://adam-ghanem.com/assets/img/og-image.png" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="../index.html" aria-label="Home">
+        <span class="logo__text">Adam Ghanem</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="../index.html">Home</a></li>
+          <li><a class="nav__link" href="../mylabs.html">My Labs</a></li>
+          <li><a class="nav__link is-active" href="../writeups.html">Writeups</a></li>
+          <li><a class="nav__link" href="../index.html#contact">Contact</a></li>
+        </ul>
+        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav__sidebar-bg" id="navSidebarBg"></div>
+        <nav class="nav__sidebar" id="navSidebar">
+          <button class="nav__sidebar-close" aria-label="Close menu" id="navSidebarClose">&times;</button>
+          <a class="nav__link" href="../index.html">Home</a>
+          <a class="nav__link" href="../mylabs.html">My Labs</a>
+          <a class="nav__link is-active" href="../writeups.html">Writeups</a>
+          <a class="nav__link" href="../index.html#contact">Contact</a>
+        </nav>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section__head">
+        <h1 class="section__title">Python Port Scanner (Educational)</h1>
+        <p class="section__desc">Goal: understand TCP connect behavior + timeouts using Python sockets (authorized environments only).</p>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="card card--line">
+          <h2 class="card__title">Overview</h2>
+          <p class="card__text">
+            This writeup documents a small script that attempts TCP connections to a list of ports and reports which ones accept connections.
+          </p>
+          <div class="card__foot">
+            <span class="tag">Python</span>
+            <span class="tag">Networking</span>
+          </div>
+        </div>
+
+        <div class="card card--line">
+          <h2 class="card__title">What I learned</h2>
+          <p class="card__text">
+            • connect_ex returns 0 on success<br>
+            • timeouts matter for speed & accuracy<br>
+            • basic error handling and clean loops
+          </p>
+        </div>
+      </div>
+
+      <div class="terminal" style="margin-top:12px; position:relative;">
+        <div class="terminal__top">
+          <span class="pill red"></span>
+          <span class="pill yellow"></span>
+          <span class="pill green"></span>
+          <span class="terminal__title">port_scan.py</span>
+          <button class="copy-btn" title="Copy code" onclick="copyCode(this)">Copy</button>
+        </div>
+        <pre class="terminal__body"><code class="language-python">import socket
+
+def scan(host: str, ports: range, timeout: float = 0.4) -> list[int]:
+    open_ports = []
+    for port in ports:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            s.settimeout(timeout)
+            if s.connect_ex((host, port)) == 0:
+                open_ports.append(port)
+    return open_ports
+
+if __name__ == "__main__":
+    # Use only on systems you own or have explicit permission to test.
+    target = "127.0.0.1"
+    ports = range(1, 1025)
+
+    result = scan(target, ports)
+    print("Target:", target)
+    print("Open ports:", result if result else "None")</code></pre>
+      </div>
+
+      <div class="card" style="margin-top:12px;">
+        <h2 class="card__title">Ethics note</h2>
+        <p class="card__text">
+          This is for learning. Don’t scan networks or systems you don’t own / don’t have explicit authorization to test.
+        </p>
+        <div class="card__foot">
+          <a class="btn btn--ghost" href="../writeups.html">← Back to Writeups</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="muted">&copy; <span data-year></span> Adam Ghanem</span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    function copyCode(btn) {
+      const code = btn.parentElement.nextElementSibling.querySelector('code');
+      navigator.clipboard.writeText(code.innerText).then(() => {
+        btn.textContent = 'Copied!';
+        setTimeout(() => { btn.textContent = 'Copy'; }, 1200);
+      });
+    }
+  </script>
+</body>
+</html>
